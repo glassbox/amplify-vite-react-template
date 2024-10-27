@@ -13,6 +13,9 @@ function App() {
     client.models.Todo.observeQuery().subscribe({
       next: (data) => setTodos([...data.items]),
     });
+    client.models.Transcript.observeQuery().subscribe({
+      next: (data) => console.log(data.items), // Handle your data here
+    });
   }, []);
 
   function createTodo() {
