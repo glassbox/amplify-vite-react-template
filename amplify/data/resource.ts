@@ -30,7 +30,6 @@ const schema = a.schema({
       // Using a.json() for complex nested data
       TranscriptData: a.json(),
       TranscriptionJobName: a.string(),
-      UpdatedAt: a.string(),
       u_name: a.string(),
     })
     .authorization(allow => [allow.publicApiKey()]) // Removed `.table()` as it’s not supported
